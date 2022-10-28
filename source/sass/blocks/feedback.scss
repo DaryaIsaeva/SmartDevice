@@ -1,0 +1,228 @@
+.feedback {
+  padding-top: 170px;
+  padding-bottom: 250px;
+  background-color: $color-light-blue;
+  position: relative;
+
+  @include vp-1023 {
+    padding-top: 50px;
+    padding-bottom: 125px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 90px;
+  }
+}
+
+.feedback::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom right, #2b648f 50%, transparent 50%);
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.feedback__wrapper {
+  display: grid;
+  grid-template-columns: auto 580px;
+  column-gap: 120px;
+
+  @include vp-1023 {
+    grid-template-columns: none;
+  }
+}
+
+.feedback__image {
+  margin: auto 0;
+  z-index: 2;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.feedback__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  grid-template-rows: auto auto auto auto auto;
+
+  @include vp-1023 {
+    width: auto;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feedback__form h2 {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+}
+
+.feedback__form p {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 40px;
+  }
+}
+
+.feedback__form input {
+  grid-row: 3/4;
+  border: none;
+  background-color: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  padding: 15px;
+  color: $color-default-white;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+}
+
+.feedback__form textarea {
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  border: none;
+  background-color: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  padding: 25px 15px;
+  color: $color-default-white;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 35px;
+  height: 155px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  @include vp-1023 {
+    padding: 32px 15px;
+  }
+
+  @include vp-767 {
+    height: 180px;
+    margin-bottom: 30px;
+  }
+}
+
+.feedback__form button {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  background-color: $color-dark-blue;
+  border: 0;
+  border-radius: 3px;
+  padding: 15px 25px;
+
+  @include vp-1023 {
+    max-width: 265px;
+  }
+
+  @include vp-767 {
+    max-width: 270px;
+    margin-bottom: 25px;
+  }
+}
+
+.feedback__form label {
+  grid-column: 2/3;
+  grid-row: 5/6;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-left: 20px;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
+.feedback__form span:last-of-type {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+}
+
+.feedback__checkbox-mark {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  margin-right: 11px;
+  position: relative;
+  border-radius: 2px;
+}
+
+.feedback__form input[type="checkbox"]:checked ~ .feedback__checkbox-mark::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 1px;
+  background: $color-default-white;
+  transform: rotate(50deg);
+}
+
+.feedback__form input[type="checkbox"]:checked ~ .feedback__checkbox-mark::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  width: 7px;
+  height: 1px;
+  background: $color-default-white;
+  transform: rotate(-50deg);
+}
