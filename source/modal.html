@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Производство и монтаж печатных плат, поставка комплектующих, блоков и модулей">
+    <title>Smart Device</title>
+    <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/PTMono-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="modal modal--no-js">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+            <h2>Закажите звонок</h2>
+            <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+            <input type="text" name="name" placeholder="Имя" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё\s]{1,}" title="Используйте только буквы" autofocus>
+            <input type="tel" name="phone" placeholder="Телефон" required title="Используйте формат: +7 (777) 777-77-77" data-mask="phone">
+            <textarea placeholder="Ваш вопрос"></textarea>
+            <button type="submit">Отправить</button>
+            <label>
+              <input class="visually-hidden" type="checkbox" checked>
+              <span class="modal__checkbox-mark"></span>
+              <span>Я согласен на обработку  персональных данных</span>
+            </label>
+          </form>
+          <a class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal href="index.html"></a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

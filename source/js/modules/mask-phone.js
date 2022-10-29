@@ -1,7 +1,17 @@
 const inputElements = document.querySelectorAll('[data-mask="phone"]');
 
-const maskOptions = {
-  mask: '+{7}(000)000-00-00',
+const addMaskPhone = () => {
+  if (!inputElements) {
+    return;
+  }
+
+  const phoneOptions = {
+    mask: '+{7}(000)000-00-00',
+  };
+
+  inputElements.forEach((el) => {
+    IMask(el, phoneOptions);
+  });
 };
 
-export {inputElements, maskOptions};
+export {addMaskPhone};

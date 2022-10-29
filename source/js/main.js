@@ -1,7 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {breakpointChecker} from './modules/adaptive';
-import {inputElements, maskOptions} from './modules/mask-phone';
+import {addMaskPhone} from './modules/mask-phone';
+import {initAccordeon} from './modules/accordeon';
+import {showAboutCompanyMore} from './modules/about-company';
 
 // ---------------------------------
 
@@ -12,9 +14,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   breakpointChecker();
-  inputElements.forEach((el) => {
-    IMask(el, maskOptions);
-  });
+  addMaskPhone();
+  initAccordeon();
+  showAboutCompanyMore();
 
   // Modules
   // ---------------------------------

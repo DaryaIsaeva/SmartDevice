@@ -1,0 +1,56 @@
+.accordeon__item ul {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.accordeon__item--show ul {
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.accordeon__item h3 {
+  @include vp-767 {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 1px;
+      display: block;
+      background-color: #c4c4c4;
+      top: 25px;
+      right: 25px;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.accordeon__item--show h3 {
+  @include vp-767 {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.accordeon--no-js ul {
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.accordeon--no-js h3::before,
+.accordeon--no-js h3::after {
+  @include vp-767 {
+    display: none;
+  }
+}
