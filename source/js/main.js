@@ -4,6 +4,7 @@ import {breakpointChecker} from './modules/adaptive';
 import {addMaskPhone} from './modules/mask-phone';
 import {initAccordeon} from './modules/accordeon';
 import {showAboutCompanyMore} from './modules/about-company';
+import {addSmoothSckroll} from './modules/skroll';
 
 // ---------------------------------
 
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   addMaskPhone();
   initAccordeon();
   showAboutCompanyMore();
+  addSmoothSckroll();
 
   // Modules
   // ---------------------------------

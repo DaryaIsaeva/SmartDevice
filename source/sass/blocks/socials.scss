@@ -38,8 +38,13 @@
 .socials__link {
   display: block;
   padding: 5px;
+
+  &:hover svg {
+    fill: $color-light-blue;
+  }
 }
 
 .socials__link svg {
   display: block;
+  fill: #f8fdff;
 }

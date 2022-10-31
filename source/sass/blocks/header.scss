@@ -81,6 +81,10 @@
     width: auto;
     padding: 10px;
   }
+
+  &:hover {
+    color: $color-light-blue;
+  }
 }
 
 .header__contacts-link span {
@@ -105,7 +109,11 @@
   border: 1px solid $color-light-grey;
   border-radius: 3px;
   cursor: pointer;
-  // margin-left: 142px;
+
+  &:hover {
+    color: $color-light-blue;
+    border-color: $color-light-blue;
+  }
 
   @include vp-1023 {
     display: none;

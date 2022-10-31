@@ -1,15 +1,19 @@
-const accordeon = document.querySelector('.accordeon');
-const accordeonItems = accordeon.querySelectorAll('.accordeon__item');
+const accordeon = document.querySelector('[data-accordeon]');
+const accordeonTitles = accordeon.querySelectorAll('[data-accordeon] h3');
 
-accordeon.classList.remove('accordeon--no-js');
+accordeon.classList.remove('no-js');
 
 const initAccordeon = () => {
-  accordeonItems.forEach((accordeonItem) => {
-    accordeonItem.addEventListener('click', () => {
-      for (let item of accordeonItems) {
-        item.classList.remove('accordeon__item--show');
+  accordeonTitles.forEach((accordeonTitle) => {
+    accordeonTitle.addEventListener('click', (evt) => {
+      if (evt.target.classList.contains('is-open')) {
+        evt.target.classList.remove('is-open');
+      } else {
+        for (let title of accordeonTitles) {
+          title.classList.remove('is-open');
+        }
+        evt.target.classList.add('is-open');
       }
-      accordeonItem.classList.toggle('accordeon__item--show');
     });
   });
 };

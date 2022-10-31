@@ -120,6 +120,11 @@
   &::placeholder {
     color: $color-default-white;
   }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $color-dark-blue;
+  }
 }
 
 .feedback__form textarea {
@@ -137,6 +142,11 @@
 
   &::placeholder {
     color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $color-dark-blue;
   }
 
   @include vp-1023 {
@@ -164,6 +174,11 @@
   border: 0;
   border-radius: 3px;
   padding: 15px 25px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(4, 24, 39, 0.7);
+  }
 
   @include vp-1023 {
     max-width: 265px;
@@ -182,6 +197,7 @@
   align-items: center;
   margin-top: auto;
   margin-left: 20px;
+  cursor: pointer;
 
   @include vp-1023 {
     margin-left: 0;
@@ -197,12 +213,16 @@
 
 .feedback__checkbox-mark {
   display: block;
-  width: 15px;
+  width: 20px;
   height: 15px;
   border: 1px solid $color-default-white;
   margin-right: 11px;
   position: relative;
   border-radius: 2px;
+
+  @include vp-1023 {
+    width: 15px;
+  }
 }
 
 .feedback__form input[type="checkbox"]:checked ~ .feedback__checkbox-mark::before {
@@ -225,4 +245,20 @@
   height: 1px;
   background: $color-default-white;
   transform: rotate(-50deg);
+}
+
+.feedback__form input[type="checkbox"]:hover ~ span {
+  color: $color-dark-blue;
+}
+
+.feedback__form input[type="checkbox"]:hover + .feedback__checkbox-mark,
+.feedback__form input[type="checkbox"]:focus + .feedback__checkbox-mark {
+  border-color: $color-dark-blue;
+}
+
+.feedback__form input[type="checkbox"]:checked:hover ~ .feedback__checkbox-mark::before,
+.feedback__form input[type="checkbox"]:checked:hover ~ .feedback__checkbox-mark::after,
+.feedback__form input[type="checkbox"]:checked:focus ~ .feedback__checkbox-mark::before,
+.feedback__form input[type="checkbox"]:checked:focus ~ .feedback__checkbox-mark::after {
+  background-color: $color-dark-blue;
 }

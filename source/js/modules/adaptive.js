@@ -1,5 +1,5 @@
-const mainBlockLink = document.querySelector('.main-block__link');
-const productsTitle = document.querySelector('.products h2');
+const mainBlockLink = document.querySelector('[data-get-consultation-button]');
+const productsTitle = document.querySelector('[data-products-title]');
 
 const breakpoint = window.matchMedia('(max-width:767px)');
 const breakpointChecker = () => {

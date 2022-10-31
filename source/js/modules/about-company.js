@@ -1,22 +1,21 @@
-const aboutCompany = document.querySelector('.about-company');
-const paragraphs = aboutCompany.querySelectorAll('.about-company__more');
-const buttonshowMore = aboutCompany.querySelector('.about-company__button');
+const aboutCompany = document.querySelector('[data-company]');
+const paragraphs = aboutCompany.querySelectorAll('[data-company="text-more"]');
+const buttonShowMore = aboutCompany.querySelector('[data-company="button"]');
 
-aboutCompany.classList.remove('about-company--no-js');
+aboutCompany.classList.remove('no-js');
 
 const showAboutCompanyMore = () => {
-  buttonshowMore.addEventListener('click', () => {
+  buttonShowMore.addEventListener('click', () => {
     paragraphs.forEach((paragraph) => {
-      paragraph.classList.toggle('about-company__more');
+      paragraph.classList.toggle('show-more');
     });
 
-    if (buttonshowMore.textContent === 'Подробнее') {
-      buttonshowMore.textContent = 'Свернуть';
+    if (buttonShowMore.textContent === 'Подробнее') {
+      buttonShowMore.textContent = 'Свернуть';
     } else {
-      buttonshowMore.textContent = 'Подробнее';
+      buttonShowMore.textContent = 'Подробнее';
     }
   });
 };
 
 export {showAboutCompanyMore};
-

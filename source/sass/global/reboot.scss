@@ -32,6 +32,9 @@ body {
   height: 100%;
 
   background-color: $color-background;
+
+  display: flex;
+  flex-direction: column;
 }
 
 a {
