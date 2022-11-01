@@ -1,10 +1,11 @@
 .footer {
   background-color: $color-dark-blue;
-  padding-top: 55px;
+  padding-top: 58px;
   padding-bottom: 45px;
   flex-shrink: 0;
 
   @include vp-1023 {
+    padding-top: 55px;
     padding-bottom: 55px;
   }
 

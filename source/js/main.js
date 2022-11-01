@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {breakpointChecker} from './modules/adaptive';
+import {breakpointCheckerMobile, breakpointCheckerDesktop} from './modules/adaptive';
 import {addMaskPhone} from './modules/mask-phone';
 import {initAccordeon} from './modules/accordeon';
 import {showAboutCompanyMore} from './modules/about-company';
@@ -14,7 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-  breakpointChecker();
+  breakpointCheckerMobile();
+  breakpointCheckerDesktop();
   addMaskPhone();
   initAccordeon();
   showAboutCompanyMore();
