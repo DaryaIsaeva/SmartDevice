@@ -64,16 +64,14 @@
               <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
             </svg>
             <h3>Оперативные сроки</h3>
-            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат
-              и комплектующих в самые короткие сроки</p>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
           </li>
           <li class="advantages__item">
             <svg width="35" height="35">
               <use xlink:href="img/sprite_auto.svg#hired"></use>
             </svg>
             <h3>Крупные поставщики</h3>
-            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с
-              такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
           </li>
           <li class="advantages__item advantages__item--small-height">
             <svg width="35" height="35">
@@ -101,17 +99,11 @@
         </div>
         <div class="about-company__wrapper">
           <h2>О компании</h2>
-          <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года.
-            Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+          <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
           <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.</p>
-          <p class="show-more-mobile" data-company="text-more-mobile">Печатные платы и комплектующие Service Devices применяются на
-            предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
-            крупнейшие Производители светотехники России.</p>
-          <p class="show-more" data-company="text-more">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов,
-            70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и
-            20 городов присутствия.</p>
-          <p class="show-more" data-company="text-more">Мы стремимся к постоянному развитию и повышению уровня качества продукции,
-            производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
+          <p class="show-more-mobile" data-company="text-more-mobile">Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+          <p class="show-more" data-company="text-more">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
+          <p class="show-more" data-company="text-more">Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
           <button class="about-company__button" data-company="button">Подробнее</button>
         </div>
       </section>
@@ -150,9 +142,12 @@
           <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
             <h2>Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
-            <input type="text" name="name" placeholder="Имя" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё\s]{1,}" title="Используйте только буквы">
-            <input type="tel" name="phone" placeholder="Телефон" required title="Используйте формат: +7 (777) 777-77-77" data-mask="phone">
-            <textarea placeholder="Ваш вопрос"></textarea>
+            <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
+            <input type="text" name="name" id="feedback-name" placeholder="Имя" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё\s]{1,}" title="Используйте только буквы">
+            <label class="visually-hidden" for="feedback-phone">Введите ваш номер телефона</label>
+            <input type="tel" name="phone" id="feedback-phone" placeholder="Телефон" required title="Используйте формат: +7 (777) 777-77-77" data-mask="phone">
+            <label class="visually-hidden" for="feedback-your-question">Задайте ваш вопрос</label>
+            <textarea id="feedback-your-question" placeholder="Ваш вопрос"></textarea>
             <button type="submit">Задать вопрос</button>
             <label>
               <input class="visually-hidden" type="checkbox" checked required>
@@ -172,24 +167,24 @@
           </div>
           <ul class="socials__list">
             <li class="socials__item">
-              <span class="visually-hidden">Одноклассники</span>
               <a class="socials__link" href="#">
+                <span class="visually-hidden">Одноклассники</span>
                 <svg width="30" height="30">
                   <use xlink:href="img/sprite_auto.svg#ok"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <span class="visually-hidden">Вконтакте</span>
               <a class="socials__link" href="#">
+                <span class="visually-hidden">Вконтакте</span>
                 <svg width="30" height="30">
                   <use xlink:href="img/sprite_auto.svg#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <span class="visually-hidden">Пинтерест</span>
               <a class="socials__link" href="#">
+                <span class="visually-hidden">Пинтерест</span>
                 <svg width="30" height="30">
                   <use xlink:href="img/sprite_auto.svg#pinterest"></use>
                 </svg>
@@ -199,44 +194,48 @@
         </div>
 
         <nav class="footer__navigation navigation accordeon no-js" data-accordeon>
-          <h3 tabindex="0">Разделы сайта</h3>
-          <ul class="navigation__list">
-            <li>
-              <a href="#">О Компании</a>
-            </li>
-            <li>
-              <a href="#">Продукты</a>
-            </li>
-            <li>
-              <a href="#">Производство печатных плат</a>
-            </li>
-            <li>
-              <a href="#">Монтаж печатных плат</a>
-            </li>
-            <li>
-              <a href="#">Комплектующие</a>
-            </li>
-            <li>
-              <a href="#">Доставка</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
+          <div class="accordeon__item">
+            <button>Разделы сайта</button>
+            <ul class="navigation__list">
+              <li>
+                <a href="#">О Компании</a>
+              </li>
+              <li>
+                <a href="#">Продукты</a>
+              </li>
+              <li>
+                <a href="#">Производство печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Комплектующие</a>
+              </li>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
 
-          <h3 tabindex="0">Наш офис</h3>
-          <ul>
-            <li>г. Мытищи, Олимпийский проспект, д.10</li>
-            <li>
-              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-            </li>
-            <li>
-              <a href="tel:+79253895829">+7 (925) 389-58-29</a>
-            </li>
-            <li>
-              <a href="tel:+79253647813">+7 (925) 364-78-13</a>
-            </li>
-          </ul>
+          <div class="accordeon__item">
+            <button>Наш офис</button>
+            <ul>
+              <li>г. Мытищи, Олимпийский проспект, д.10</li>
+              <li>
+                <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+              </li>
+              <li>
+                <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+              </li>
+              <li>
+                <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </footer>
@@ -248,9 +247,12 @@
           <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
             <h2>Закажите звонок</h2>
             <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-            <input type="text" name="name" placeholder="Имя" id="modal-name" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё\s]{1,}" title="Используйте только буквы">
-            <input type="tel" name="phone" placeholder="Телефон" required title="Используйте формат: +7 (777) 777-77-77" data-mask="phone">
-            <textarea placeholder="Ваш вопрос"></textarea>
+            <label class="visually-hidden" for="modal-name">Введите ваше имя</label>
+            <input type="text" name="name" id="modal-name" placeholder="Имя" id="modal-name" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё\s]{1,}" title="Используйте только буквы">
+            <label class="visually-hidden" for="modal-phone">Введите ваш номер телефона</label>
+            <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required title="Используйте формат: +7 (777) 777-77-77" data-mask="phone">
+            <label class="visually-hidden" for="modal-your-question">Задайте ваш вопрос</label>
+            <textarea id="modal-your-question" placeholder="Ваш вопрос"></textarea>
             <button type="submit">Отправить</button>
             <label>
               <input class="visually-hidden" type="checkbox" checked required>

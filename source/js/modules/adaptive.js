@@ -7,19 +7,33 @@ const breakpointDesktop = window.matchMedia('(min-width:1024px)');
 
 const breakpointCheckerMobile = () => {
   if (breakpointMobile.matches) {
-    mainBlockLink.textContent = 'Бесплатная консультация';
-    productsTitle.innerHTML = 'Товары и услуги <br> Smart Device';
+    if (mainBlockLink) {
+      mainBlockLink.textContent = 'Бесплатная консультация';
+    }
+
+    if (productsTitle) {
+      productsTitle.innerHTML = 'Товары и услуги <br> Smart Device';
+    }
   } else {
-    mainBlockLink.textContent = 'Получить бесплатную консультацию';
-    productsTitle.textContent = 'Smart Device предлагает следующие товары и услуги';
+    if (mainBlockLink) {
+      mainBlockLink.textContent = 'Получить бесплатную консультацию';
+    }
+
+    if (productsTitle) {
+      productsTitle.textContent = 'Smart Device предлагает следующие товары и услуги';
+    }
   }
 };
 
 const breakpointCheckerDesktop = () => {
   if (breakpointDesktop.matches) {
-    cardTitle.innerHTML = 'Монтаж печатных <br> плат';
+    if (cardTitle) {
+      cardTitle.innerHTML = 'Монтаж печатных <br> плат';
+    }
   } else {
-    cardTitle.innerHTML = 'Монтаж <br> печатных плат';
+    if (cardTitle) {
+      cardTitle.innerHTML = 'Монтаж <br> печатных плат';
+    }
   }
 };
 

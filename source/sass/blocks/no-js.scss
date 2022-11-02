@@ -1,0 +1,31 @@
+// Стили для аккордеона
+
+.no-js ul {
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.no-js button::before,
+.no-js button::after {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+// Стили для блока О компании
+
+.no-js .show-more {
+  display: block;
+}
+
+.no-js .show-more-mobile {
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.no-js .about-company__button {
+  display: none;
+}

@@ -74,6 +74,7 @@
   background-size: cover;
   padding: 50px 40px;
   position: relative;
+  background-color: $color-light-blue;
 
   @include vp-1023 {
     max-width: 100%;
@@ -88,7 +89,6 @@
 
 .products__link--production {
   background-image: url("../img/card-1-desktop.jpg");
-  background-color: $color-light-blue;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/card-1-desktop@2x.jpg");

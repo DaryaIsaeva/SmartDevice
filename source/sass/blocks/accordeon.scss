@@ -4,14 +4,7 @@
   }
 }
 
-.is-open + ul {
-  @include vp-767 {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.accordeon h3 {
+.accordeon button {
   @include vp-767 {
     position: relative;
 
@@ -33,26 +26,12 @@
   }
 }
 
-.accordeon .is-open {
+.accordeon button.is-open {
   @include vp-767 {
     cursor: pointer;
 
     &::after {
       display: none;
     }
-  }
-}
-
-.no-js ul {
-  @include vp-767 {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.no-js h3::before,
-.no-js h3::after {
-  @include vp-767 {
-    display: none;
   }
 }

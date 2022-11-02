@@ -22,9 +22,12 @@
           <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
             <h2>Закажите звонок</h2>
             <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-            <input type="text" name="name" placeholder="Имя" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё\s]{1,}" title="Используйте только буквы" autofocus>
-            <input type="tel" name="phone" placeholder="Телефон" required title="Используйте формат: +7 (777) 777-77-77" data-mask="phone">
-            <textarea placeholder="Ваш вопрос"></textarea>
+            <label class="visually-hidden" for="modal-name">Введите ваше имя</label>
+            <input type="text" name="name" id="modal-name" placeholder="Имя" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё\s]{1,}" title="Используйте только буквы" autofocus>
+            <label class="visually-hidden" for="modal-phone">Введите ваш номер телефона</label>
+            <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required title="Используйте формат: +7 (777) 777-77-77" data-mask="phone">
+            <label class="visually-hidden" for="modal-your-question">Задайте ваш вопрос</label>
+            <textarea id="modal-your-question" placeholder="Ваш вопрос"></textarea>
             <button type="submit">Отправить</button>
             <label>
               <input class="visually-hidden" type="checkbox" checked required>
