@@ -262,3 +262,10 @@
 .modal__form input[type="checkbox"]:checked:focus ~ .modal__checkbox-mark::after {
   background-color: $color-dark-blue;
 }
+
+.modal__logo {
+  display: block;
+  background-color: $color-dark-blue;
+  padding: 10px;
+  margin-bottom: 15px;
+}

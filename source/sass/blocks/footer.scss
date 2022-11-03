@@ -29,6 +29,7 @@
 }
 
 .footer__logo {
+  display: block;
   margin-bottom: 30px;
 
   @include vp-1023 {

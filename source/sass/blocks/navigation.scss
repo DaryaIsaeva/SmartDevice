@@ -1,7 +1,7 @@
 .navigation {
   display: grid;
   grid-template-columns: auto minmax(200px, 345px);
-  column-gap: 30px;
+  gap: 30px;
   margin-left: auto;
 
   @include vp-1023 {
@@ -12,6 +12,7 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 }
 

@@ -90,23 +90,29 @@
 .products__link--production {
   background-image: url("../img/card-1-desktop.jpg");
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/card-1-desktop@2x.jpg");
-  }
-
   @include vp-1023 {
     background-image: url("../img/card-1-tablet.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/card-1-tablet@2x.jpg");
-    }
   }
 
   @include vp-767 {
     background-image: url("../img/card-1-mobile.jpg");
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/card-1-mobile@2x.jpg");
+  @media (min-resolution: 2dppx) {
+    @include vp-767 {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/card-1-mobile@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/card-1-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url("../img/card-1-desktop@2x.jpg");
     }
   }
 }
@@ -114,23 +120,29 @@
 .products__link--mounting {
   background-image: url("../img/card-2-desktop.jpg");
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/card-2-desktop@2x.jpg");
-  }
-
   @include vp-1023 {
     background-image: url("../img/card-2-tablet.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/card-2-tablet@2x.jpg");
-    }
   }
 
   @include vp-767 {
     background-image: url("../img/card-2-mobile.jpg");
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/card-2-mobile@2x.jpg");
+  @media (min-resolution: 2dppx) {
+    @include vp-767 {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/card-2-mobile@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/card-2-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url("../img/card-2-desktop@2x.jpg");
     }
   }
 }
@@ -138,23 +150,29 @@
 .products__link--accessories {
   background-image: url("../img/card-3-desktop.jpg");
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/card-3-desktop@2x.jpg");
-  }
-
   @include vp-1023 {
     background-image: url("../img/card-3-tablet.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/card-3-tablet@2x.jpg");
-    }
   }
 
   @include vp-767 {
     background-image: url("../img/card-3-mobile.jpg");
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/card-3-mobile@2x.jpg");
+  @media (min-resolution: 2dppx) {
+    @include vp-767 {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/card-3-mobile@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/card-3-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url("../img/card-3-desktop@2x.jpg");
     }
   }
 }
