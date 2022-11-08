@@ -181,6 +181,7 @@
   padding: 15px 25px 11px 25px;
   cursor: pointer;
   width: 265px;
+  user-select: none;
 
   &:hover {
     background-color: rgba(4, 24, 39, 0.7);
@@ -208,6 +209,7 @@
 
   @include vp-767 {
     margin-left: 5px;
+    order: 1;
   }
 }
 

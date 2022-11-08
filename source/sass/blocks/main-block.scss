@@ -109,6 +109,7 @@
   border-radius: 3px;
   max-width: 410px;
   padding: 15px 25px;
+  user-select: none;
 
   &:hover {
     background-color: rgba(0, 178, 255, 0.7);

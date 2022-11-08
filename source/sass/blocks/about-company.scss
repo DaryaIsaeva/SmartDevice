@@ -89,6 +89,7 @@
   min-width: 180px;
   box-sizing: border-box;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     color: $color-default-white;

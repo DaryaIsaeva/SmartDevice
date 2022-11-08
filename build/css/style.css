@@ -696,18 +696,15 @@ button,
   padding: 0;
   margin: 0 auto;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
+  row-gap: 10px;
 }
 
 .header__contacts-item:not(:nth-of-type(2n)) {
-  margin-right: 28px;
+  margin-right: 8px;
 }
 
 .header__contacts-link {
@@ -715,7 +712,10 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 225px;
+  min-width: 225px;
+  padding: 10px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .header__contacts-link:hover {
@@ -741,6 +741,10 @@ button,
   border-radius: 3px;
   cursor: pointer;
   margin-right: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header__open-modal:hover {
@@ -824,6 +828,10 @@ button,
   border-radius: 3px;
   max-width: 410px;
   padding: 15px 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main-block__link:hover {
@@ -944,6 +952,10 @@ button,
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .about-company__button:hover {
@@ -1224,6 +1236,10 @@ button,
   padding: 15px 25px 11px 25px;
   cursor: pointer;
   width: 265px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .feedback__form button:hover {
@@ -1381,7 +1397,6 @@ button,
   text-transform: uppercase;
   color: #ffffff;
   background-color: transparent;
-  margin-top: 0;
   margin-bottom: 20px;
   border: 0;
 }
@@ -1402,8 +1417,17 @@ button,
   list-style-type: none;
 }
 
-.navigation li {
+.navigation li,
+.navigation a {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.navigation__first-column li:not(:last-of-type),
+.navigation__second-column li:not(:last-of-type) {
+  margin-bottom: 6px;
+}
+
+.navigation__contacts li:not(:last-of-type) {
   margin-bottom: 6px;
 }
 
@@ -1415,6 +1439,14 @@ button,
 
 .navigation a:hover {
   color: #00b2ff;
+}
+
+.accordeon__item {
+  margin-top: -4px;
+}
+
+.accordeon button {
+  padding: 0;
 }
 
 .modal {
@@ -1463,11 +1495,7 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   width: 100%;
-  min-height: 100%;
   padding: 40px;
 }
 
@@ -1482,19 +1510,21 @@ button,
 
 .modal__content {
   position: relative;
-  width: 600px;
+  width: 500px;
   padding: 40px;
+  margin-left: -15px;
+  top: 106px;
   background-color: #00b2ff;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 16px;
+  right: 16px;
   z-index: 1;
   width: 20px;
   height: 20px;
-  padding: 10px;
+  padding: 20px;
   background-color: transparent;
   background-image: url("../img/sprite/close-modal-button.svg");
   background-repeat: no-repeat;
@@ -1554,8 +1584,8 @@ button,
   line-height: 42px;
   font-weight: 400;
   color: #ffffff;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: -3px;
+  margin-bottom: 4px;
 }
 
 .modal__form p {
@@ -1563,7 +1593,8 @@ button,
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 37px;
 }
 
 .modal__form input {
@@ -1612,7 +1643,7 @@ button,
   color: #ffffff;
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   height: 155px;
 }
 
@@ -1654,8 +1685,13 @@ button,
   border: 0;
   border-radius: 3px;
   padding: 15px 60px;
-  margin-bottom: 35px;
+  padding-bottom: 13px;
+  margin-bottom: 20px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .modal__form button:hover {
@@ -1672,6 +1708,9 @@ button,
   margin-top: auto;
   margin-left: 8px;
   cursor: pointer;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .modal__form span:last-of-type {
@@ -1833,8 +1872,7 @@ button,
   }
 
   .header__contacts-link {
-    width: auto;
-    padding: 10px;
+    min-width: auto;
   }
 
   .header__contacts-link span {
@@ -1886,6 +1924,10 @@ button,
 
   .advantages__item svg {
     margin-bottom: 8px;
+  }
+
+  .advantages__item--small-height svg {
+    margin-bottom: 4px;
   }
 
   .advantages__item h3 {
@@ -2049,9 +2091,9 @@ button,
 
   .navigation {
     margin-left: 0;
-    -webkit-column-gap: 110px;
-    -moz-column-gap: 110px;
-    column-gap: 110px;
+    -webkit-column-gap: 105px;
+    -moz-column-gap: 105px;
+    column-gap: 105px;
   }
 
   .navigation button {
@@ -2068,7 +2110,16 @@ button,
     flex-direction: column;
   }
 
-  .navigation li {
+  .navigation__list > li {
+    margin-bottom: 5px;
+  }
+
+  .navigation__first-column li:not(:last-of-type),
+  .navigation__second-column li:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+
+  .navigation__contacts li:not(:last-of-type) {
     margin-bottom: 5px;
   }
 }
@@ -2275,6 +2326,9 @@ button,
 
   .feedback__form label {
     margin-left: 5px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
   }
 
   .feedback__checkbox-mark {
@@ -2300,7 +2354,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding-top: 35px;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
     margin-bottom: 0;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -2328,23 +2382,43 @@ button,
 
   .navigation button {
     width: 100%;
-    padding: 20px 25px;
-    margin: 0;
-    border-top: 1px solid rgba(248, 253, 255, 0.7);
-    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+    margin-bottom: 0;
     text-align: left;
   }
 
-  .navigation ul {
-    padding: 20px 25px;
+  .navigation .is-open {
+    margin-bottom: 16px;
   }
 
-  .accordeon ul {
+  .navigation li,
+  .navigation a {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .navigation li.navigation__address {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 16px;
+  }
+
+  .accordeon__item {
+    margin-top: 0;
+    padding: 19px 25px 16px 25px;
+    border-top: 1px solid rgba(248, 253, 255, 0.7);
+    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+  }
+
+  .accordeon__item > ul {
     display: none;
   }
 
   .accordeon button {
     position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   .accordeon button::before,
@@ -2355,8 +2429,8 @@ button,
     height: 1px;
     display: block;
     background-color: #c4c4c4;
-    top: 25px;
-    right: 25px;
+    top: 5px;
+    right: 2px;
   }
 
   .accordeon button::after {
