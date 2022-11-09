@@ -397,7 +397,7 @@ template {
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
-  src: url("../fonts/PTMono-regular.woff2") format("woff2"), url("../fonts/PTMono-regular.woff") format("woff");
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff");
 }
 
 @font-face {
@@ -676,6 +676,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -685,6 +688,9 @@ button,
 .header__logo {
   display: block;
   margin-right: 12px;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
 }
 
 .header__logo img {
@@ -694,17 +700,16 @@ button,
 
 .header__contacts-list {
   padding: 0;
-  margin: 0 auto;
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-  grid-template-columns: auto auto;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 45px;
+  -moz-column-gap: 45px;
+  column-gap: 45px;
   row-gap: 10px;
-}
-
-.header__contacts-item:not(:nth-of-type(2n)) {
-  margin-right: 8px;
+  margin-left: -20px;
 }
 
 .header__contacts-link {
@@ -712,10 +717,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 225px;
-  padding: 10px;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .header__contacts-link:hover {
@@ -740,11 +744,18 @@ button,
   border: 1px solid #f2f5f7;
   border-radius: 3px;
   cursor: pointer;
+  margin-top: 7px;
   margin-right: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
 }
 
 .header__open-modal:hover {
@@ -1855,24 +1866,24 @@ button,
     padding-top: 20px;
     padding-bottom: 25px;
     padding-right: 9%;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .header__logo {
-    margin-right: 0;
+    margin-right: auto;
   }
 
   .header__contacts-list {
-    margin-right: 0;
-    margin-left: auto;
-    margin-top: -15px;
-  }
-
-  .header__contacts-item:not(:nth-of-type(2n)) {
-    margin-right: 20px;
+    margin: 0;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
   }
 
   .header__contacts-link {
-    min-width: auto;
+    padding: 10px;
   }
 
   .header__contacts-link span {
@@ -2150,13 +2161,13 @@ button,
     padding-right: 11%;
   }
 
+  .header__logo {
+    margin-top: 5px;
+  }
+
   .header__logo img {
     width: 35px;
     height: 35px;
-  }
-
-  .header__contacts-list {
-    margin-top: 0;
   }
 
   .main-block {
@@ -2211,6 +2222,10 @@ button,
   .advantages__item--small-height {
     padding: 28px 30px 35px 25px;
     min-height: 325px;
+  }
+
+  .advantages__item--small-height svg {
+    margin-bottom: 8px;
   }
 
   .advantages__item h3 {
